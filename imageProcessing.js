@@ -1,17 +1,10 @@
-function getColor(ctx, x, y){
+function getColor(ctx, x, y){ // :: Context -> Int -> Int -> [Int]
     var data = ctx.getImageData(x, y, 1, 1).data;
     return [data[0], data[1], data[2]]; // [r, g, b]
 }
 
-function getImg(url){
-    var img = document.createElement('img');
-    img.crossOrigin = "anonymous";
-    img.src = url;
-    return img;
-}
-
 // return array of the 4 borders (top, right, bottom, left), all in clockwise direction
-function getBorders(img){ // [[Color]]  
+function getBorders(img){ // :: Image -> [[Color]]  
     console.log(img);
     var width = img.width;
     var height = img.height;
@@ -46,4 +39,11 @@ function getBorders(img){ // [[Color]]
     }
 
     return [top, right, bottom, left];
+}
+
+function getImg(url){ // :: String -> Image
+    var img = document.createElement('img');
+    img.crossOrigin = "anonymous"; // prevent cross origin block
+    img.src = url;
+    return img;
 }
