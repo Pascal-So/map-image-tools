@@ -1,0 +1,24 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+let y(lat) = the y position according to mercator
+it follows that y' = sec
+
+71.165699, 25.793868  1
+71.165709, 25.795547  2
+71.166237, 25.793868  3
+
+arrangement:
+
+3
+
+1    2, distance roughly 60m
+
+
+dLat = 71.166237 - 71.165699 = 0.000538
+dLng = 25.795547 - 25.793868 = 0.001679
+
+dLng/dLat = 3.1208
+
+actual value at 71.1656 = 3.09757
